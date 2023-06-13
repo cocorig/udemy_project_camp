@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .line{
+            border: 1px solid black;
+            padding:  10px;
+        }
+        input{ 
+            /* margin: top right bottom left; */
+            margin: 10px 0 10px 0;
+        }
+        table tr td{
+
+        }
+        tr:nth-child(even){
+
+        }
+    </style>
+</head>
+<body>
+    <h3>1. HTML 제목은 &lt;h1&gt; ~ &lt;h6&gt; 태그로 정의됩니다.</h3>
+<h3>&lt;h1&gt;은 가장 중요한 제목을, &lt;h6&gt;은 가장 중요하지 않은 제목을 정의합니다.</h3>
+
+    <!-- 제목 태그 -->
+    <div class=" line">
+        <h1>This is heading 1</h1>
+        <h2>This is heading 2</h2>
+        <h3>This is heading 3</h3>
+    </div>
+    
+    <!-- 단락태그 -->
+        <h3>2 .단락은 &lt;p&gt; 태그로 정의 됩니다.</h3>
+        <div class=" line">
+            <p>This is paragraph</p> 
+            <p>This is another paragraph</p>
+        </div>
+     <!-- 링크 태그 -->
+        <h3>3. 링크은 &lt;a&gt;태그로 정의 됩니다.</h3>
+            <div class="line">
+                <a href="https://www.google.com/">This is google link</a>
+            </div>
+         <!-- 이미지 태그   -->
+         <h3>4.이미지는  &lt;img&gt;태그로 정의 됩니다.소스 파일(src), 대체 텍스트 (alt), 너비 및 높이가 속성으로 제공됩니다.</h3>
+        <div class="line"><img src="./wallpaperbetter (1).jpg" alt="해리포터" width="300px" height="300px">이미지태그는 인라인요소지요</div> 
+        
+        <!-- 목록 태그 -->
+        <h1>장바구니 목록</h1> 
+        <ul>
+            <li>사과</li>
+            <li>바나나</li>
+            <li>딸기</li>
+        </ul>
+
+        <!-- 테이블 태그 -->
+        <table>
+            <!-- <tr>은 행을 정의  -->
+            <tr>
+            <!-- th는 헤더 셀 정의 -->
+              <th>과일</th> 
+              <th>수량</th>
+            </tr>
+            <tr>
+            <!-- td는 데이터 셀 -->
+              <td>사과</td>
+              <td>10</td>
+            </tr>
+            <tr>
+              <td>바나나</td>
+              <td>5</td>
+            </tr>
+            <tr>
+                <td>딸기</td>
+                <td>3</td>
+            </tr>
+          </table>
+
+          <!-- 폼 태그 -->
+          <form action="submit">
+            <label for="name">이름:</label>
+            <input type="text" id="name" name="name" required>  <br/>
+            <label for="email">이메일:</label>
+            <input type="text" id="email" name="email" required> <br/>
+            <label for="password">비밀번호:</label>
+            <input type="text" id="password" name="password" required> <br/>
+            <input type="submit" value="가입하기">
+          </form>
+    </div>
+</body>
+</html>

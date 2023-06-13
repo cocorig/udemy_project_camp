@@ -1,0 +1,182 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+
+#wrap{
+    width: 1920px;
+    height: 768px;
+   
+}
+header{
+    height: 70px;
+    position: relative;
+}
+header img{
+
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 404px;
+    top: 20px;
+
+}
+header h1{
+    position: absolute;
+    left: 447px;
+    top: 20px;
+    color:  #0E7159;;
+    margin: 0px;
+}
+header a{
+    right: 526px;
+    width: 43px;
+    height: 13px;
+    position: absolute;
+    height: 14px;
+    top: 28px;
+    text-decoration: none;;
+    font-family: 'Spoqa Han Sans Neo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.448946px;
+
+    color: #333D4B;
+}
+#header-btn2{
+    width: 90px;
+    height: 30px;
+    position: absolute;
+    right: 404px;
+    top: 20px;
+    background: #0E7159;
+    border-radius: 4px;
+}
+
+#header-btn2 a{
+    position: absolute;
+    height: 14px;
+    left: 26.67%;
+    right: 25.56%;
+    top: calc(50% - 14px/2);
+    text-decoration: none;
+    font-family: 'Spoqa Han Sans Neo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.448946px;
+
+    color: #FFFFFF;
+
+}
+
+/* 섹션1 */
+
+#section_1{ 
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url(./image/Rectangle.png);
+    position: absolute;
+    width: 1920px;
+    height: 768px;
+    left: 0px;
+    top: 70px;
+    background: #000000;
+    mix-blend-mode: normal;
+    opacity: 0.8;
+  
+}
+ 
+#section_1 h1{
+position: absolute;
+height: 144px;
+left: -0.14%;
+right: -0.14%;
+top: calc(50% - 144px/2 - 33.5px);
+font-family: 'Spoqa Han Sans Neo';
+font-style: normal;
+font-weight: 700;
+font-size: 60px;
+line-height: 72px;
+letter-spacing: -2.24473px;
+color: #FFFFFF;
+margin: 0;
+}
+
+#section_1 p{
+
+    margin: 0;
+    position: absolute;
+    height: 29px;
+    top: calc(50% - 29px/2);
+    font-family: 'Spoqa Han Sans Neo';
+    right: 861px;
+    top: 472px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: -0.897892px;
+    color: #FFFFFF;
+
+}
+#section_1 a{
+
+    position: absolute;
+    bottom: 18.71%;
+    right: 840px;
+    top: 478px;
+    
+}
+a img{
+    width: 11px;
+    height: 18px;
+}
+
+
+#wrap_center{
+
+    width: 1269px;
+}
+
+#section_2{
+
+    width: 1269px;
+    margin: 0 auto;
+    height: 768px;
+}
+
+#section_2 h1{
+
+
+position: absolute;
+height: 58px;
+left: 25.78%;
+right: 25.68%;
+top: calc(50% - 58px/2 - 256.5px);
+
+font-family: 'Spoqa Han Sans Neo';
+font-style: normal;
+font-weight: 500;
+font-size: 48px;
+line-height: 58px;
+/* identical to box height */
+
+display: flex;
+align-items: center;
+letter-spacing: -1.79578px;
+margin: 0;
+color: #0E7159;
+
+}
