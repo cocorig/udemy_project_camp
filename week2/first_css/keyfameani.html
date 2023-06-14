@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #wrapper{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+    
+        @keyframes spin {
+            0%{
+                transition: rotate(0deg);
+            }
+            100%{
+                transition: rotate(360deg);
+            }
+        }
+        .square{
+            width: 30px;
+            height: 30px;
+            background-color: blueviolet;
+        }
+        .circle{
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background-color: aquamarine;
+            animation: spin 2s  linear infinite;
+        }
+
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .blinking-element {
+        animation: blink 1s infinite;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div class="circle"></div>
+        <div class="square"></div> 
+    </div>
+    <div class="blinking-element">⭐️ 🌈 ✨</div>
+
+</body>
+</html>

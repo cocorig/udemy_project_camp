@@ -1,0 +1,45 @@
+header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    padding: 20px;
+    color: #fff;
+    position: fixed
+    ;
+  }
+  
+  .logo {
+    width: 100px;
+  }
+  
+  .navigation ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(7, auto);
+    grid-gap: 20px;
+  }
+  
+  .navigation ul li a {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .navigation ul li a:hover {
+    background-color: #555;
+  }
+
+
+.box{
+
+    width:320px;
+    height:400px
+}
+
+div .img{
+  width: 320px;
+  height: 150px;
+}
+  
