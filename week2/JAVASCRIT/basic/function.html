@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript</title>
+</head>
+<body>
+    <h1 id="hello"></h1>
+    <p class="add"></p>
+
+</body>
+<script>
+    const hello = document.getElementById('hello');
+    const add = document.querySelector('#add');
+    function myFuncion(p1,p2){
+        return p1 * p2;
+    }
+    let value = myFuncion(4,5);
+    console.log(value);
+    hello.innerHTML=value;
+    
+    function add(a,b){
+        return a + b;
+    }
+
+    //const add = (a,b)=>{ return a+b}
+    console.log(add(4,5));
+</script>
+</html>

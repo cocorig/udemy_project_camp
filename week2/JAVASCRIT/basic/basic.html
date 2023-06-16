@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js basic</title>
+</head>
+<body>
+    <h1>my first web page</h1>
+    <p>my first web page</p>
+
+    <p id="demo"></p>
+
+    <script>
+        document.getElementById('demo').innerHTML =  5 + 6;
+       
+        let x =  5+5;  ///11
+        let y =  5 + '5'; //'55', 숫자에 문자가 있으면 그냥 문자열로 인식!
+        let z = 'hello' + 5; //'hello5'
+        console.log(x,y,z)
+        console.log(typeof(x)) //number
+        console.log(typeof(y)) //string
+        console.log(typeof(z)) //string
+        //number
+        let length = 15;
+        let weigth = 7.5;
+        //string
+        let color = 'red';
+        let lastName= 'hayeon';
+
+        //booleans
+        let a = true; 
+        let b = false;
+        //Object
+        const person= {
+            
+            fisrtName : 'Lee',
+            lastName : 'hayeon',
+        }
+        //Array 
+        const arr = ['saab','bar','baz'];
+        //Date Object
+        const date = new Date('2010-01-01');
+    </script>
+</body>
+</html>

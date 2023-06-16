@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 슬라이더</title>
+</head>
+<body>
+    <img id="profile" src="./image/profile-modified.png" alt="">
+    <button id="next">다음</button>
+    <button id="back">이전 </button>
+<script>
+
+    const profile = document.querySelector('#profile');
+    const next = document.querySelector('#next');
+    const back = document.querySelector('#back');
+
+    const imageArr = ['./image/profile-modified.png', 'wallpaperbetter (2)']
+
+    let Currentindex = 0;
+
+
+        next.addEventListener('click',()=>{
+            Currentindex = (Currentindex + 1 )  % imageArr.length;
+            profile.src = imageArr[Currentindex];
+           
+    })
+        back.addEventListener('click',()=>{
+            Currentindex = (Currentindex - 1 + imageArr.length) % imageArr.length;
+            profile.src = imageArr[Currentindex];
+    })
+
+      
+   
+</script>
+</body>
+</html>
+
+<!-- 이미지 슬라이더 박스, 버튼 2개
+이전 버튼 클릭 시 실행되는 함수
+다음 버튼 클릭 시 실행되는 함수 -->
