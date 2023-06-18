@@ -11,170 +11,270 @@
     <mata property="og:type" content="website"></mata>
     <mata property="og:url" content=""></mata>
     <mata property="og:image" content=""></mata>
-    <link rel="icon" type="image/x-icon" href="./image/logo.png">
+    <link rel="icon" href="./image/favicon.ico" type="./image/x-icon">
     <script src="https://kit.fontawesome.com/32cd117d3a.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css">
-    <script src="./src/main.js" defer></script>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./main.js" defer></script>
 </head>
 <body>
     <!-- Header -->
-    <header>
-        <div>
-            <img src="./image/logo.png" alt="logo">
-            <h1><a href="#"></a></h1>
+    <header class="header">
+        <div class="header__logo">
+            <h1 class="header__logo__title"><a href="#">HaYeon</a></h1>
         </div>
         <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#sklils">Skills</a></li>
-                <li><a href="#work">My work</a></li>
-                <li><a href="#test">Testimonal</a></li>
-                <li><a href="#contect">Contact</a></li>
+            <ul class="header__menu">
+                <li><a class="header__menu__item active  
+                    "   href="#home">Home</a></li>
+                <li><a class="header__menu__item
+                    "   href="#about">About</a></li>
+                <li><a class="header__menu__item
+                    "   href="#skills">Skills</a></li>
+                <li><a class="header__menu__item
+                    "   href="#study">My study</a></li>
+                <li><a class="header__menu__item
+                    "   href="#test">Testimonal</a></li>
+                <li><a class="header__menu__item
+                    "   href="#contect">Contact</a></li>
+                    
+                <i class="fa-solid fa-bars"></i>
             </ul>
         </nav>
+       
     </header>
 
     <!-- Main -->
     
     <main>
        <!-- SECTION_1 -->
-        <section id="home">
-            <div>
-                <img src="./image/profile-removebg-preview.png" alt="하연이미지">
-                <h2>Hello l'm <span>Hayeon Lee</span> </h2>
-                <p>Hello, I'm Lee Ha Yeon who dreams of becoming a front-end developer</p>
-                <a href="#contect">Contect ME!</a>
-            </div>
-        </section>
-          <!-- SECTION_2-->
-        <section id="about">
-            <h1>About me</h1>
-            <p>Hello, I'm the front-end developer, Lee Ha-yeon.
-                My goal is to grow day by day</p>
-            <ul>
-                <li>
-                    <i class="fa-brands fa-html5"></i>
-                    <h3>HTML</h3>
-                    <p>Pages using html, css</p>
-                </li>
-                <li>
-                    <i class="fa-brands fa-square-js"></i>
-                    <h3>JAVASCRIP</h3>
-                    <p>Dynamic pages using JavaScript</p>
-                </li>
-                <li>
-                    <i class="fa-brands fa-react"></i>
-                    <h3>REACT</h3>
-                    <p>Studying react</p>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <i class="fa-sharp fa-solid fa-campground"></i>
-                    <p>udemy project camp </p>
-                    <p> From June 2023</p>
-                </li>
-            </ul>
-        </section>
-          <!-- SECTION_2-->
-        <section id="skils">
-            <h2>MY Skils</h2>
+        <section id="home" class="section max-container">
+         
+                <img  class="home__img" src="./image/profile-remove.png" alt="하연이미지">
+                <h2 class="home__title">Hello <br/> l'm <strong class="home__title__name">Hayeon Lee</strong> </h2>
+                <p  class="home__desc">Hello, I'm Lee Ha Yeon who dreams of becoming a front-end developer. <br>
+                    My goal is to grow day by day!!
+                </p>
 
-        
-                <section>
-                    <h3>Coding Skills</h3>
+                <a  class="home__contect" href="#contect">Contect ME!</a>
+      
+        </section>
+
+
+
+          <!-- SECTION_2-->
+        <section id="about" class="section max-container">
+            <h1 class="title">About me</h1>
+            <p class="desc">Hello, I'm Lee Ha-yeon, whose dream is to become a front-end developer. <br>
+                I graduated from the Department of Information and Communication Engineering, and I am studying about the front end until now because I am interested in development.</p>
+            
+            <ul class="majors">
+                <li class="major">
+                    <i class="fa-brands fa-html5"  id="major__icon"></i>
+                    <h3 class="major__title">HTML</h3>
+                    <p class="desc">Pages using html, css</p>
+                </li>
+                <li class="major">
+                    <i class="fa-brands fa-square-js" id="major__icon"></i>
+                    <h3  class="major__title">JAVASCRIT</h3>
+                    <p class="desc">Dynamic pages using JavaScript</p>
+                </li>
+                <li class="major">
+                    <i class="fa-brands fa-react" id="major__icon"></i>
+                    <h3  class="major__title">REACT</h3>
+                    <p class="desc">Studying react</p>
+                </li>
+            </ul>
+            <ul class="camp">
+                <li class="about__camp">
+                    <i class="fa-sharp fa-solid fa-campground" id="camp__icon"></i>
+                    <p>Udemy Project Camp in progress.. </p>  
+                   
+                </li>
+            </ul>
+        </section>
+
+          <!-- SECTION_2-->
+        <section id="skills" class="section max-container">
+            <div class="section">
+                <h2 class="title">MY Skills</h2>
+                 <div class="skills">
+                
+                    <section  class="skills__coding">
+                        <h3  class="skills__title">Coding Skills</h3>
+
+                            <ul>
+                                <li class="bar">
+                                    <div class="bar__metadata"><span>HTML</span><span>50%</span></div>
+                                    <div class="bar__bg"><div class="bg__value" style="width: 50%"></div></div>
+                                </li>
+                                <li class="bar">
+                                    <div class="bar__metadata"><span>CSS</span><span>50%</span></div>
+                                    <div class="bar__bg"><div class="bg__value" style="width: 50%"></div></div>
+                                </li>
+                                <li class="bar">
+                                    <div class="bar__metadata"><span>JAVASCRIPT</span><span>50%</span></div>
+                                    <div class="bar__bg"><div class="bg__value" style="width: 50%"></div></div>
+                                </li>
+                                <li class="bar">
+                                    <div class="bar__metadata"><span>REACT</span><span>50%</span></div>
+                                    <div class="bar__bg"><div class="bg__value" style="width: 50%"></div></div>
+                                </li>
+                                <li class="bar">
+                                    <div class="bar__metadata"><span>TYPESCRIPT</span><span>50%</span></div>
+                                    <div class="bar__bg"><div class="bg__value" style="width: 50%"></div></div>
+                                </li>
+                                <li class="bar">
+                                    <div class="bar__metadata"><span>NEXT.JS</span><span>50%</span></div>
+                                    <div class="bar__bg"><div class="bg__value" style="width: 50%"></div></div>
+                                </li>
+                            </ul>
+                    </section>
+                    <section class="skills__tools">
+                        <h3  class="skills__title">Tools</h3>
                         <ul>
                             <li>
-                                <div><span>HTML</span><span>50%</span></div>
-                                <div><div style="width: 50%"></div></div>
+                                    Visual Studio Code
                             </li>
-
-                            <li>
-                                <div><span>CSS</span><span>50%</span></div>
-                                <div><div style="width: 50%"></div></div>
-                            </li>
-
-
-                            <li>
-                                <div><span>JAVASCRIP</span>60%<span>
-                                <div><div style="width: 50%"></div></div>
-                            </li>
-                            <li>
-                                <div><span>REACT</span><span>50%</span></div>
-                                <div><div style="width: 50%"></div></div>
-                            </li>
-
-                            <li>
-                                <li>
-                                    <div><span>camp</span><span>50%</span></div>
-                                    <div><div style="width: 50%"></div></div>
-                                </li>
-                            </li>
-                    
                         </ul>
-                </section>
-          
-           
-                <section>
-                    <h3>Tools</h3>
-                    <ul>
-                        <li>
-                                Visual Studio Code
-                        </li>
-                    </ul>
-                </section>
-                <section>
-                    <h3>Ets</h3>
-                    <ul>
-                        <li>Git</li>
-                    </ul>
-                </section>  
+                    </section>
+                    <section class="skills__etc">
+                        <h3 class="skills__title">Ets</h3>
+                        <ul>
+                            <li>Git</li>
+                        </ul>
+                    </section>
+                        </div>
+            </div>
        
         </section>
 
           <!-- SECTION_3 -->
-        <section id="propject">
+        <section id="study" class="max-container">
             
-            <h1>My work</h1>
-            <h3>projects</h3>
-            <div class="btn_group">
-                <button></button>
-                <button></button>
-                <button></button>
-                <button></button>
-            </div>
-            <div >
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            
-                <h1></h1>
-                <span></span>
-                <div></div>
-                <div></div>
-                <div></div>
-            </section>
+            <div class="section">
+                <h2 class="title">My Study</h2>
+                <p class="desc">an ongoing study</p>
+
+                <ul class="categories">
+                    <li><button class="categorie categorie--selected">All<span class="category__cnt">8</span></button></li>
+                    <li><button class="categorie">front-end<span class="category__cnt">7</span></button></li>
+                    <li><button class="categorie">Back-end <span class="category__cnt">1</span></button></li>
+                </ul>
+               
+               
+                <ul class="projects">
 
 
+                    <li class="project">
+                        <a href="https://github.com/cocorig/udemy_project_camp" target="_blank">
+                            <img src="./image/image.png" alt="유데미 프로젝트 캠프"  class="project__img">
+                            <div class="project__metadata">
+                                <h3 class="project__title">Udemy project camp</h3>
+                                <p>I'm studying at the Udemy Project Camp</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="project">
+                        <a href="https://github.com/cocorig/Algorithm_Study" target="_blank">
+                            <img src="./image/image.png" alt="코딩 테스트 스터디" class="project__img">
+                            <div class="project__metadata">
+                                <h3 class="project__title">Algorithm_Study</h3>
+                                <p>I'm studying algorithms for coding tests</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="project">
+                        <a href="https://github.com/cocorig/React_Study" target="_blank">
+                            <img src="./image/image.png" alt="리액트 스터디" class="project__img">
+                            <div class="project__metadata">
+                                <h3 class="project__title">React_Study</h3>
+                                <p>We are implementing a movie website and a to-do list site with React</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="project">
+                        <a href="https://github.com/cocorig/Frontend_Mentor_Challenges" target="_blank">
+                            <img src="./image/image.png" alt="프론트엔드 프로잭트 챨린지" class="project__img">
+                            <div class="project__metadata">
+                                <h3 class="project__title">Frontend_Mentor_Challenges</h3>
+                                <p>Matt Studert's project challenge</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="project">
+                        <a href="https://github.com/cocorig/Js_study" target="_blank">
+                            <img src="./image/image.png" alt="자바스크립트 스터디" class="project__img">
+                            <div class="project__metadata">
+                                <h3 class="project__title">Js_study</h3>
+                                <p>Making a simple game with JavaScript and implementing a website</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="project">
+                        <a href="https://github.com/cocorig/Ts_study" target="_blank">
+                            <img src="./image/image.png" alt="타입스크립트 스터디" class="project__img">
+                            <div class="project__metadata">
+                                <h3 class="project__title">Ts_study</h3>
+                                <p>I'm studying type script</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="project">
+                        <a href="https://github.com/cocorig/Html-Css_Study" target="_blank">
+                            <img src="./image/image.png" alt="html,css 스터디" class="project__img">
+                            <div class="project__metadata">
+                                <h3 class="project__title">Html-Css_Study</h3>
+                                <p>Clone coding with Html, css</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="project">
+                        <a href="#" target="_blank">
+                            <img src="./image/image.png" alt="Db 스터디" class="project__img">
+                            <div class="project__metadata">
+                                <h3 class="project__title">Express & MongoDB</h3>
+                                <p>I'm studying Express & MongoDB </p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        
             <!-- UP_BTN -->
-            <aside></aside>
+            <aside >
+                <a class="arrow-up" href="#home" title="back to top">
+                    <i class="fa-solid fa-arrow-up"></i>
+                </a>   
+            </aside>
     </main>
 
     <!-- footer -->
-        <footer>
-           
-            <i class="fa-solid fa-envelope"></i>
-            <i class="fa-brands fa-blogger"></i>
-            <i class="fa-brands fa-github-alt"></i>
+
+
+        <footer id="contect" class="section max-container">
+           <h2 class="title">Let&#39; talk</h2>
+           <p class="desc">ihayeon010@gmail.com</p>
+           <ul class="contect__links">
+            <li>
+                <a class="contect__link" href=""type="_blank" title="#">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+            </li>
+            <li>
+                <a  class="contect__link" href="https://velog.io/@cocorig"  type="_blank" title="my blog link">
+                    <i class="fa-brands fa-blogger"></i>
+                </a>
+            </li>
+            <li >
+                <a class="contect__link" href="https://github.com/cocorig" type="_blank" title="my github link"> 
+                    <i class="fa-brands fa-github-alt"></i>
+                </a>
+            </li>
+           </ul>
         </footer>
     </article>
 </body>
