@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>할 일 목록</title>
+    <script src="./main.js" defer></script>
+    <style>
+      
+        .todolist{
+            padding: 1rem
+            
+        }
+        .todolist__input{
+            margin-bottom: 1rem;
+        }
+        .todo ,.addTodoBtn{
+            padding: 8px;
+        
+        }
+        .todobox {
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+        }
+        button{
+            outline: 0;
+            border: 0;
+            cursor: pointer;
+            padding: 8px;
+            border-radius: 5px;
+            
+        }
+        .addTodoBtn{
+            background-color:cadetblue;
+            color: antiquewhite;
+           
+        }
+        .todoText{
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid burlywood;
+            border-radius: 8px;
+            padding: 4px 8px;
+            margin-bottom: 8px;
+        }
+        .delete{
+            margin: 8px;
+            background-color: tomato;
+            color: antiquewhite;
+        }
+
+    </style>
+</head>
+<body>
+        <section class="todolist">
+            <div class="todolist__input">
+                <input type="text" class="todo" placeholder="할 일을 입력하세요">
+                <button class="addTodoBtn">추가</button>
+            </div>
+
+            <ul class="todobox">
+            
+            </ul>
+        </section>
+</body>
+</html>
