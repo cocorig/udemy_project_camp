@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    
+<script>
+    
+    let person ={
+        name: '이하연',
+        age: 26,
+        heigth: 160,
+        carrers: {'대학': '졸업', 
+                    "부트캠프": '유데미'}
+  
+    }
+
+        const {name, age, heigth} = person;
+        const carrers = person.carrers;
+        document.write(`제 이름은 ${name}이고, 나이는 ${age}입니다`)
+        document.write(`제 키는 ${heigth}입니다.`)
+        document.write(`제 이름은 ${person['name']}이고, 나이는 ${person['age']}입니다`)
+        document.write(`현재 상태: ${carrers.대학}, 수료 중: ${carrers['부트캠프']}`)
+        </script>
+</body>
+</html>

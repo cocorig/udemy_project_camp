@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="greeting">hello</h1>
+    <script>
+        const belong =  'udemy X 스나이퍼팩토리';
+        const person = '이하연';
+        let name = '이하연';
+        let age = 26;
+        let x,y,z;
+        let a = 4;
+        let b = 20;
+        x = 5;
+        y = 6;
+        y++;
+        ++y; 
+        x--;
+        --x;
+        document.getElementById('greeting').innerHTML = 'js';
+        document.write(`x=${x} y=${y}`);
+        document.write('<br/>');
+        document.write(`기획: ${belong}, 참가자: ${person}`);
+        document.write('<br/>');
+        document.write(`이름: ${name}  나이:${age}`);
+        //a가 3보다 크고 5보다 작으면 a와 b를 더하고 그렇지않으면 a와 b를 곱하세요.
+        if(3 < a < 5){
+            console.log( a + b);
+        }else{
+            console.log( a * b);
+        }
+        //a 가 4이거나 b가 10이면 a와 b를 곱하세요
+        if(a === 4 || b === 10){
+            console.log( a * b);
+        }
+        //a가 4이고,b가 20 둘다 만족하면 a,b를 곱하고, 그렇지않으면 a 와 b를 나눈 나머지를 구하세요
+        if(a === 4 && b === 20){
+            console.log( a * b);
+        }else{
+            console.log( a % b);
+        }
+    </script>
+</body>
+</html>
