@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const strings = ['Hello',' ', 'World', '!'];
+        const txt = 'FRONTEND'
+        let score = 2000;
+        let money = 0;
+        if(score > 90){
+            document.write('굳잡 <br>'); 
+            money += 10000
+        }else if(score > 80){
+            document.write('굳 <br>'); 
+            money += 5000
+        }else if(score > 70){
+            document.write('음.. <br>'); 
+            money += 1000
+        }else{
+            money = 0;
+        }
+
+        document.write(money);
+
+
+        function solution(arr){
+            return  strings.join('');
+           
+        }
+        console.log(solution(strings)); //Hello World!
+        console.log(strings.includes(' ')); // true
+        console.log(txt.startsWith('FR')); // true
+        console.log(txt.startsWith('FRo')); // false
+        console.log(txt.endsWith('END')); //true
+        console.log(txt.endsWith('ND')); //true
+    </script>
+</body>
+</html>
+
+
+
+<!-- concat,join,lastindexOf,include -->

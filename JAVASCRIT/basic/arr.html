@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열</title>
+</head>
+<body>
+    <!-- getElementById  특정 id를 가진 요소 조회 --> 
+    <h1 id="getId"></h1>
+    <!-- getElementByName  name 속성을 가진 요소 조회-->
+    <h1 name="getName"></h1>
+    <!-- getElementByClassName 특정 class를 가진 요소 조회-->
+    <h1 class="getClassname"></h1>
+  
+    <!-- getElementByTagName  특정 tag name 기준으로 요소죄회-->
+
+    <span >getElementByTagName </span>
+    
+
+    <p><input name="fname" type="text"></p>
+    <p><input name="fname" type="text"></p>
+    <p><input name="fname" type="text"></p>
+
+
+    <ul>
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ul> 
+
+</body>
+<script>
+        const getid =  document.getElementById('getId');
+        const getname = document.getElementsByName('getName');
+        const getclassname = document.getElementsByClassName('getClassname')
+        const tag =  document.getElementsByTagName('span');
+      
+        // const demo =  document.getElementById('domo');
+        // const getId =  document.getElementById('getId');
+
+        // const getName =  document.querySelector('#getName');
+        // const fruits = ['Banana' , "Orange","Apple","Mongo"];
+        // demo.innerHTML = fruits.toString();
+
+        
+</script>
+</html>
+<!-- 
+     **
+        html요소의 값을 가지고 올때나 설정할때 사용, 사용자에게 표시되는 렌더링된 텍스트 콘텐츠를 나타냄.
+        innerText : 요소 안에 있는  글자를 가지고 올때시용
+    **
+    값을 저장 조회할때
+         htmlelement.interHTML 태그 내 새로운 요소 객체나 내용을 저장,조회할떼 사용
+         htmlinputElement.value= input태그의 value값을 저장 및 조회할때 사용
+
+
+-->

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html 템플릿</title>
+</head>
+    
+    <h2></h2> <!-- header -->
+        <ul>
+            <li></li>
+        </ul>
+        <p id="demo"></p>
+<body>
+    <script>
+       const fruits = ['banana', 'kiwi', 'apple']
+
+        let header = 'Templates Literals';
+        let tag = ['template literals', 'js' , 'ed6'];
+
+        let html = `<h2>${header}</h2>` 
+
+        for(const x of tag){
+            html += `<li>${x}</li>`;
+            
+        }
+    
+        
+        console.log(html);         //배열을 문자열로 변환해서 id가 demo인 태그안에 넣는다
+        document.getElementById('demo').innerHTML = fruits.toString();
+        document.querySelector('h2').innerHTML =  header; 
+        document.querySelector('li').innerHTML = html;
+    </script>
+       
+</body>
+</html>
+ <h2>Templates Literals</h2>
+ <li>template literals</li
+    ><li>js</li>
+    <li>ed6</li>
+</ul>
