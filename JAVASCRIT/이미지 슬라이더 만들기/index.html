@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 슬라이더</title>
+    <style>
+        .slider {
+            width: 500px;
+            height: 300px;
+            overflow: hidden;
+        }
+        .slider img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease-in-out;
+        }
+        .slider img:not(:first-child){
+            display: none 
+        }
+    </style>
+</head>
+<body>
+    <div class="slider">
+        <img id="profile" src="./image/01.jpg"  alt="">
+        <img id="profile" src="./image/02.jpg"  alt="">
+        <img id="profile" src="./image/03.jpg"  alt="">
+        <img id="profile" src="./image/04.jpg" alt="">
+        <img id="profile" src="./image/05.jpg" alt="">
+        <img id="profile" src="./image/06.jpg" alt="">
+        <img id="profile" src="./image/07.jpg" alt="">
+    </div>
+
+    <button id="back">이전 </button>
+    <button id="next">다음</button>
+<script>
+    const slider = document.querySelector('.slider');
+    const images = document.querySelectorAll('.slider img');
+    const next = document.querySelector('#next');
+    const back = document.querySelector('#back');
+
+    next.addEventListener('click',nextImage);
+    back.addEventListener('click',backImage);
+    let Currentindex = 0;
+
+    function nextImage(){
+        images[Currentindex].style.display = 'none';
+        Currentindex= (Currentindex + 1) % images.length;
+        images[Currentindex].style.display = 'block';
+    }
+    function backImage(){
+        images[Currentindex].style.display = 'none';
+        Currentindex= (Currentindex - 1 + images.length) % images.length;
+        images[Currentindex].style.display = 'block';
+    }
+   
+</script>
+</body>
+</html>
+
+<!-- 이미지 슬라이더 박스, 버튼 2개
+이전 버튼 클릭 시 실행되는 함수
+다음 버튼 클릭 시 실행되는 함수 -->
