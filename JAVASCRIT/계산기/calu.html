@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>계산기</title>
+</head>
+<body>
+   <input id="num1" type="text">
+   <input id="num2" type="text">
+   <input id="operator" type="text">
+   <button id="multi">X</button>
+   <button id="calculateBtn">계산</button>
+   <h1 id="result">결과:</h1>
+
+   <script>
+    function calculate() {
+      const num1Input = document.getElementById('num1');
+      const num2Input = document.getElementById('num2');
+      const operatorInput = document.getElementById('operator');
+      const resultElement = document.getElementById('result');
+      const multi = document.getElementById('multi');  
+      const num1 = parseFloat(num1Input.value);
+      const num2 = parseFloat(num2Input.value);
+      const operator = operatorInput.value;
+
+      let result;
+
+      switch (operator) {
+        case '*':
+          result = num1 * num2;
+          break;
+        case '+':
+          result = num1 + num2;
+          break;
+        case '-':
+          result = num1 - num2;
+          break;
+        case '/':
+          result = num1 / num2;
+          break;
+        default:
+         
+          return;
+      }
+
+      resultElement.textContent = '결과: ' + result;
+    }
+
+    const calculateBtn = document.getElementById('calculateBtn');
+    calculateBtn.addEventListener('click', calculate);
+   </script>
+</body>
+</html>
