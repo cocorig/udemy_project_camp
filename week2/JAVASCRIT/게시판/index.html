@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시판</title>
+    <script src="./main.js" defer></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+                
+            }
+        #board{
+            padding: 2rem;
+        }
+       ul{
+            list-style-type: none;
+            padding: 0;
+           
+        }
+        .list{
+            
+            border: 1px solid black;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            padding: 1rem;
+        }
+        
+    </style>
+</head>
+<body>
+     <section id="board">
+        <h1>게시판</h1>
+        
+            <ul class="lists">
+                <!-- <li class="list">
+                    <h2 >제목</h2>
+                    <p>내용</p>
+                </li> -->
+            </ul>
+            <input  class="title" type="text" placeholder="제목" >
+            <input  class="content" type="text" placeholder="내용을 입력하세요">
+            <button class="btn">글 올리기</button>
+        </section>
+</body>
+</html>
+
