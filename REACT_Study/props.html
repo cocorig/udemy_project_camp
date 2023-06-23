@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Start</title>
+    <!--react cdn-->
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <!--babel cdn-->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const root = document.getElementById('root');
+
+        function Btn({text,fontSize,backgroundColor,}){ //== props.text,props.fontSize,props.backgroundColor
+            return (
+                <button style={{ //중괄호 두개
+                    backgroundColor: backgroundColor,
+                    color: 'white',
+                    fontSize: fontSize,
+                    border: 0,
+                    borderRadius: '10px',
+                    margin : '3px',
+                }}>
+                   {text}
+                </button>
+            )
+        }
+
+
+        function App({name,age,favolit}){
+           //  js부분
+            const [cnt,setCnt] = React.useState(0); //app을 조정하는거니까 안에 넣어줘야한
+
+
+            const onClick = ()=>{
+                setCnt((cnt)=> cnt + 1 );
+            }
+// -----------------------------------------------
+            return (
+            <>    
+
+            <h1>Total clicks :{cnt}</h1>
+            <h1>Hello , {name}님! </h1>
+            <p>나이 : {age}</p>
+            <p>좋아하는 거 : {favolit}</p>
+            <button onClick={onClick}></button>
+            <Btn text = "hi" fontSize={20} backgroundColor="#ff6547"/>
+            <Btn text = "bye" fontSize={40}  backgroundColor="#d6336c"/>
+            <Btn text = "lala" fontSize={30}  backgroundColor="#ffa8a8"/>
+            <Btn text = "lol" fontSize={35}  backgroundColor="#ffe3e3"/>
+            <Btn text = "css" fontSize={40}  backgroundColor="blueviolet"/>
+            <Btn text = "qq" fontSize={10}  backgroundColor="aquamarine"/>
+            </>   
+        )
+        }
+     
+        ReactDOM.render(<App name='Hayeon' age={26} favolit='고양이'/>,root); //숫자는 중괄호!
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Start</title>
+    <!--react cdn-->
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <!--babel cdn-->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+ 
+
+    <script type="text/babel">
+      
+      const root  = document.getElementById('root');
+
+        function Counter() { //내가 만든 컴포넌트!! 첫글자는 대문자!!
+            const [count,setCount] = React.useState(0);
+            return (
+                <div>
+                    {count}
+                    <button onClick={() => setCount(count+1)}>증가</button>
+                    <button onClick={()=> setCount(count-1)}>감소</button>
+                </div>
+            )
+
+        }
+       
+        ReactDOM.render(<Counter/>,root) //내가 만든 컴포넌트를 root안에서 싫행하겠다,
+    </script>
+</body>
+</html>
+<!-- 
+React.createElement(Greeting, {message : '이하연'}) 
+첫번째 인수: 생성할 요소의 타입, div,h1 p,..
+두번째 인수: 요소의 속성 , className, style , onClick ..
+세번째 인수:  요소의 자식 ,요소내부에 다른 요소나 텍스트를 포함시킬수 있음
+const cotainer =  React.createElement('div', null ,'heloo')
+-->

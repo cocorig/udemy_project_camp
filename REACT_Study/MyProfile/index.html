@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <!--react cdn-->
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <!--babel cdn-->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+
+        const root =  document.getElementById('root');
+       
+        const Profile = ()=>{ //내가 만든 컴포넌트임
+            const [cnt , setCnt] = React.useState(0);
+
+            const profileStyle = {
+
+                    padding: '20px',
+                    border: '1px solid  #ff6547',
+                    borderRadius: '8px',
+                    width: '300px',
+                    margin: '0 auto',
+                
+            }
+            const btnStyle = {
+                
+                borderRadius: '8px',
+                width: '300px',
+                padding: '20px',
+                color : '#ff6547',
+                background: '#ffe3e3',
+                borderRadius: '8px',
+                
+            
+            }
+            const onclick = ()=>{
+                Setcnt((cnt)=> (cnt) + 1);
+            }
+            return(
+                <div style = {profileStyle}>
+                    <h1>이하연 프로필입니다.</h1>
+                     <dl>
+                        <dt>이름</dt>
+                        <dd>이하연</dd>
+                    
+                        <dt>MBTI</dt>
+                        <dd>isfj</dd>
+                    
+                        <dt>좋아하는것</dt>
+                        <dd>아이스 아메리카노</dd>
+                        
+                        <dt>혈액형</dt>
+                        <dd>A형</dd>
+                    </dl>  
+                    <button onClick={onclick} style={btnStyle}>좋아요: {cnt}</button>    
+                </div>
+                 )
+        }
+
+
+
+     ReactDOM.render(<Profile />,root); // 컴포넌트 렌더링
+    </script>
+</body>
+</html>

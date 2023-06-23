@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>펫프랜즈 검색창</title>
+    <!--react cdn-->
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <!--babel cdn-->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const root =  document.getElementById('root');
+
+        const SerchForm = ()=>{
+
+
+            return(
+            <>   
+            <h1>펫 상품 검색창</h1> 
+            <form action="https://m.pet-friends.co.kr/main/search" method="GET" target="_self">
+                <label for="word">펫 상품: </label>
+                <input type="text" id="word" name="word" placeholder="어떤 상품을 찾고있개?"/> 
+                <button type="submit">검색하기</button>
+                
+            </form>
+
+            </>
+            )
+        }
+
+
+
+
+
+
+
+        ReactDOM.render(<SerchForm/>,root); // 컴포넌트 렌더링
+
+    </script>
+</body>
+</html>

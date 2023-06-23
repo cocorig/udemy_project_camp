@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Start</title>
+    <!--react cdn-->
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <!--babel cdn-->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        let num = 0;
+        const root  = document.getElementById('root');
+      
+        const updateNum = () => {
+            num++;
+            ReactDOM.render(<TotalClick/>, root);
+        };
+
+        function TotalClick() {
+            return (
+                <div>
+                      <h1 id="이하연" style={{ color: 'red' }}>Total Click: {num}</h1>
+                      <button onClick={updateNum}>클릭!</button>
+                </div>
+            );
+        
+        }
+        //TotalClick이라는 div에 h1,button을 넣겠다.
+        ReactDOM.render(<TotalClick/>,root);
+    </script>
+</body>
+</html>
+<!-- 
+React.createElement(Greeting, {message : '이하연'}) 
+첫번째 인수: 생성할 요소의 타입, div,h1 p,..
+두번째 인수: 요소의 속성 , className, style , onClick ..
+세번째 인수:  요소의 자식 ,요소내부에 다른 요소나 텍스트를 포함시킬수 있음
+const cotainer =  React.createElement('div', null ,'heloo')
+
+
+<div id='root'> =>root
+    <div> =>TotalClick
+        <h1 id="이하연" style="color: red;">Total Click: 0</h1> =>h1
+        <button>클릭!</button>  =>btn
+    </div>
+<div/>
+-->
