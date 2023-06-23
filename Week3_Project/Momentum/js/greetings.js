@@ -20,10 +20,23 @@ function onLoginSubmit(e){
 
 ///추가한 localStorage 항목을 읽는 법
 const savedUsername = localStorage.getItem(USERNAME_KEY); 
+const date = new Date();
+const hours = date.getHours()
 
 function paintGreeting(username){
     greeting.classList.remove(HIDDEN_CLASSNAME) 
-    greeting.innerText =  `Hello, ${username}`;        
+    let hello = ' ';
+    if(hours >= 6 && hours <= 11){
+        hello  = 'Good Morning'
+    }else if(hours >= 12 && hours <= 17){
+        hello  = 'Good Affternoon'
+    } else if(hours >= 18 && hours <= 21){
+        hello = 'Good Evenning'
+    }else{
+        hello = 'Goodnight'
+    }
+   
+    greeting.innerText =  `${hello}, ${username}`;        
 }
 
 
