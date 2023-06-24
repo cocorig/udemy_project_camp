@@ -1,7 +1,7 @@
 const loginForm = document.querySelector('#login-form');
 const loginInput =document.querySelector('#login-form input');
 const greeting =  document.querySelector('#greeting');
-
+const todolist =  document.querySelector('.todo');
 const HIDDEN_CLASSNAME = 'hidden'; 
 const USERNAME_KEY = 'username';
 
@@ -12,7 +12,8 @@ function onLoginSubmit(e){
     const username = loginInput.value;    
     loginForm.classList.add(HIDDEN_CLASSNAME);
     localStorage.setItem(USERNAME_KEY, username); //localStorage에 변수저장!
-    paintGreeting(username);      
+    paintGreeting(username);   
+   
 }
 
 
@@ -25,6 +26,7 @@ const hours = date.getHours()
 
 function paintGreeting(username){
     greeting.classList.remove(HIDDEN_CLASSNAME) 
+    todolist.classList.remove(HIDDEN_CLASSNAME);
     let hello = ' ';
     if(hours >= 6 && hours <= 11){
         hello  = 'Good Morning'
@@ -41,13 +43,13 @@ function paintGreeting(username){
 
 
 if(savedUsername === null){ //아무값이 없다면 form태그를 보여줌
-
+    todolist.classList.add(HIDDEN_CLASSNAME);
     loginForm.classList.remove(HIDDEN_CLASSNAME);
     loginForm.addEventListener('submit',onLoginSubmit); 
     
 }else{ //값이 있다면  h1태그를 보여줌
-
  
+    todolist.classList.remove(HIDDEN_CLASSNAME);
     paintGreeting(savedUsername);      
    
 

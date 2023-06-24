@@ -9,9 +9,9 @@ const TODOS_KEY = 'todo';
 /**삭제 버튼을 누르면 li태그를 삭제하는 함수 */
 function deleteTodo(e){
    
-    console.log(todoArr)
-    //console.dir(e.target.parentElement.innerText);   //li태그
-    const li = e.target.parentElement; //내가 선택한 id를 todoArr에서 걸러내고싶음
+    const button = e.target.parentElement; //내가 선택한 id를 todoArr에서 걸러내고싶음
+    const li =  button.parentElement;
+    
     li.remove();
     todoArr =  todoArr.filter((todo)=>
         todo.id !== parseInt(li.id) 
@@ -38,13 +38,17 @@ function paintTodoList(todoValue){ //객체를 받음
     const span =  document.createElement('span');
     span.innerText = todoValue.text;
     const btn = document.createElement('button');
-    btn.innerText = 'X';
+    const i = document.createElement('i');
+    i.className ='fa-solid fa-trash';
     btn.addEventListener('click',deleteTodo); //btn을 클릭했을때 deleteTodo가 실행된다.
     li.appendChild(span);
-    li.appendChild(btn); //appendChild는 맨 마지막!!
+    li.appendChild(btn);
+    btn.appendChild(i) //appendChild는 맨 마지막!!
     todoList.appendChild(li);
 
-    
+    span.addEventListener('click',()=>{
+        span.classList.toggle('toggle')
+    });
 }
 
 /** user가 input에 작성한 값을 가져와서 변수에 저장하고, 초기화시켜주는 함수 */
@@ -52,6 +56,8 @@ function hendleToDoSubmit(e){
     e.preventDefault();
     const todoValue = toDoInput.value;  //비우기 전에 변수에 저장,toDoInput.value;비웠다고 todoValue가 비워지는건 아님! 헷갈리지 말자
     toDoInput.value = '';///******toDoInput.value이 값을 비워야해!!저장한 값을 비우면 xx,현재 input창에 있는 값을 비우자.
+    toDoInput.focus();
+
     const TodoObj = {
         text : todoValue,
         id : Date.now()

@@ -1,20 +1,54 @@
-const Imgs  = [
+
+
+
+const Morning  = [
 
     
-    'img(1).jpeg',
-    'img(2).jpeg',
-    'img(3).jpeg',
-    'img(4).jpeg',
-  
-  
-
+    'image(1).png',
+    'image(2).png',
+    'image(3).png',
+    
+    // background-image: url(/img/image\(3\).png);
 ]
-const body = document.querySelector('body');
-const img =  document.querySelector('img');
-console.dir(img)
-const srcIdx =  Math.floor(Math.random() * Imgs.length);
-console.log(Imgs[srcIdx])//img(2).jpeg 경로가 무작위로 나옴 
+const Afternoon =[ 
+    'afternoon(1).png',
+    'afternoon(2).png',
+    
+]
+const Evening = [
 
-const bgImg = document.createElement('img');  
-bgImg.src =`./img/${Imgs[srcIdx]}`;
-body.appendChild(bgImg);
+    'evening(1).png',
+    'evening(2).png'
+]
+const Night =[
+    'night(1).png',
+    'night(2).png',
+    'night(3).png',
+    'night(4).png',
+]
+// <img src="/img/nigth(2).png" alt="">
+
+const body = document.querySelector('body');
+const img =  document.createElement('img');
+
+if (hours >= 6 && hours <= 11) {
+    const srcIdx =Morning[Math.floor(Math.random() * Morning.length)];
+    img.src = `/img/${srcIdx}`
+   
+
+  } else if (hours >= 12 && hours <= 17) {
+    const srcIdx = Afternoon[Math.floor(Math.random() * Afternoon.length)];
+    img.src = `/img/${srcIdx}`
+  
+
+  } else if (hours >= 18 && hours <= 21) {
+    const srcIdx =Evening[Math.floor(Math.random() * Evening.length)];
+    body.style.backgroundImage = `url(/img/${srcIdx})`;
+
+  } else {
+    const srcIdx = Night[Math.floor(Math.random() * Night.length)];
+    body.style.backgroundImage = `url(/img/${srcIdx})`;
+  
+  }
+  
+  document.body.appendChild(img);
