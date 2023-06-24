@@ -1,0 +1,404 @@
+:root{
+
+
+
+    /* Color */
+
+    --color-white: #ffffff;
+
+    --color-black: #333D4B;
+    
+    --color-green: #0E7159;
+    
+    --color-orange: #fd6413;
+    
+    --color-gray: #6B7684;
+ 
+}
+
+
+
+*{
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.max-container{
+    width: 100%;
+    margin: auto;
+ }
+
+.section{
+    padding: 4rem;
+    text-align: center;
+}
+
+main{
+    padding: 4rem;
+    text-align: center;
+    
+ }
+ 
+ h1,h2,h3,p,ul{
+     margin: 0;
+ }
+ 
+ ul{
+     list-style: none;
+ 
+ }
+ 
+ a{
+     text-decoration: none;
+     color: var(--color-text);
+ }
+ button{
+     background-color: transparent;
+     outline: 0;
+     border: 0;
+     cursor: pointer;
+ }
+span{
+    color: var(--color-black);
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 25px;
+}
+ p{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--color-gray)
+ }
+
+ .green{
+    color: var(--color-green);
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 58px;
+
+     }
+
+ #header{
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    width: 100%;
+    height: 70px;
+    left: 0px;
+    top: 0px;
+    
+    
+ }
+
+ .header__logo{
+    display: flex;
+    align-items: center;
+    
+   
+ }
+ .header__logo__img{
+    width: 30px;
+    height: 30px;
+    margin-right: 13px;
+ }
+ .header__logo__title{
+    font-size: 30px;
+    color: var(--color-green);
+    text-shadow: (0px 4px 4px rgba(0, 0, 0, 0.25));
+ }
+
+ .header__nav{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+ }
+.header__nav__ans{
+    font-size: 12px;
+}
+.header__nav__btn{
+    padding: 8px 24px;
+    font-size: 12px;
+    background-color: var(--color-green);
+    border-radius: 4px;
+    font-weight: 700;
+    color: var(--color-white);
+    margin-left: 32px;
+   
+}
+
+
+ .title.green{
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 58px;
+    display: flex;
+    align-items: center;
+    color: #0E7159;
+ }
+/* 배너 */
+
+#benner{
+    
+    /* background:url(./image/architecture_2256489_1920.png); */
+    background-color: #333D4B;
+    /* opacity: 0.8; */
+    z-index: 0;
+    width: 100%;
+    height: 768px;
+    left: 2px;
+    top: 58px;
+}
+
+.benner__title{
+    padding: 250px 610px;
+
+}
+.benner__desc__title{
+
+z-index: 1;
+color: var(--color-white);
+font-family: 'Spoqa Han Sans Neo';
+font-style: normal;
+font-weight: 700;
+font-size: 60px;
+line-height: 72px;
+display: flex;
+align-items: center;
+text-align: center;
+justify-content: center;
+
+
+}
+.benner__title p{
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: var(--color-white);
+    display: flex;
+    margin-top: 46px;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+
+
+/* 섹션1 */
+#section__1{
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10rem;
+}
+.section__boxs{
+ display: flex;
+
+}
+.section__box{
+  
+}
+.next p,img{
+    color: var(--color-green);
+}
+
+
+/* 섹션2 */
+
+#section__2{
+position: absolute;
+width: 1920px;
+height: 677px;
+left: 0px;
+top: 1659px;
+ padding: 20px 500px;
+display: flex;
+flex-direction: column;
+align-items: center;
+
+}
+
+/* 섹션 */
+
+#section__3{
+position: absolute;
+width: 1920px;
+height: 677px;
+left: 0px;
+top: 2408px;
+ padding: 20px 500px;
+display: flex;
+flex-direction: column;
+align-items: center;
+
+}
+.section_3__gird{
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2,1fr);
+    
+}
+.section_3__gird div{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+.section_3__gird span{
+
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 25px;
+    display: flex;
+    margin-bottom: 0.5rem;
+}
+
+
+/* 앱 */
+#apps li{
+   display: flex;
+   padding: 20px 500px;
+}
+#apps li:nth-child(even) img{
+    order: 1;
+}
+#app li img{
+    margin-right: 300px;
+}
+.app_1{
+position: absolute;
+width: 1920px;
+height: 824px;
+left: 0px;
+top: 3157px;
+
+
+}
+.app_2{
+    position: absolute;
+    width: 1920px;
+    height: 824px;
+    left: 0px;
+    top: 4053px;
+    
+}
+.app_3{
+    position: absolute;
+    width: 1920px;
+    height: 824px;
+    left: 0px;
+    top: 4949px;
+    
+}
+
+
+
+
+/* 섹션5 */
+#section__5{
+    position: absolute;
+    width: 1920px;
+    height: 677px;
+    left: 0px;
+    top: 5845px;
+    padding: 20px 500px;
+  
+}
+
+
+.section_5__grid{
+  
+    display: grid;
+    grid-template-columns:  repeat(3,1fr);
+    margin-top: 100px;
+  
+   
+}
+.section_5__grid div{
+    padding: 30px;
+    background-color: #ebebeb;
+    margin: 30px;
+    border-radius:5px;
+}
+.section_5__grid div title{
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+}
+
+.btn.green{
+
+    background: #0E7159;
+    border-radius: 8px;
+    color: var(--color-white);
+    font-size: 16px;
+    width: 100%;
+}
+/* 섹션6 */
+#section__6{
+    position: absolute;
+    width: 2114px;
+    height: 629px;
+    left: -102px;
+    top: 6594px;
+   
+
+}
+
+
+/* 섹션7 */
+#section__7{
+
+    position: absolute;
+    width: 100%;
+    height: 608px;
+    left: 0px;
+    top: 8683px;
+    background: #0E7159;
+    padding: 160px 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+}
+#section__7 h1{
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 72px;
+    color: var(--color-white);
+}#section__7 .btn{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    background-color: #ebebeb;
+    padding: 30px;
+    margin-top: 60px;
+    border-radius: 8px;
+    color: #0E7159;
+}
+footer{
+    position: absolute;
+    width: 1024px;
+    height: 159px;
+    left: 0px;
+    top: 9291px;
+    padding: 25px 100px;
+}
+footer span{
+    color: #333D4B;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 2px;
+}
