@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Momentum</title>
+    <link rel="stylesheet" href='./css/style.css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/32cd117d3a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- 시계 -->
+    <h2 id="clock"></h2>
+   
+   
+    <!-- 로그인 -->
+    <form id="login-form" class="hidden" >
+        <input type="text" placeholder="what is your name?"required maxlength="15">
+        <button type="submit"  class="sumbitBtn">Log In</button>
+    </form>
+    <!-- 로그인 성공시 나타나는 인사 & 이름 -->
+    <h1 class="hidden" id="greeting"></h1>
+    <!-- todo -->
+    <form  id="todo-form">
+        <input class="todo" type="text" placeholder="What is your main focus for today?" required autofocus>
+    </form>
+      <ul id="todo-list" >
+    <!-- <li>
+        <span>todo</span>  //js로 만들자@!
+        <button>삭제</button>
+    </li> -->
+      </ul>
+      
+      
+    <!-- 명언 -->
+    <div id="quote">
+    <span></span>
+    <span></span>
+    </div>
+    <!-- 날씨 -->
+    <div id="weather">
+    <span></span>
+    <span></span>
+    </div>
+    <span id="Data"></span>
+
+
+  <script src="./js/greetings.js" ></script>
+  <script src="./js/clock.js" ></script>
+  <script src="./js/quotes.js" ></script>
+  <script src="./js/background.js"></script>
+  <script src="./js/todo.js"></script>
+  <script src="./js/weather.js" ></script>
+  <script src="./js/data.js"></script>
+</body>
+</html>

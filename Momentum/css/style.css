@@ -1,0 +1,134 @@
+
+html,body{
+    top: 0;
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    overflow: auto;
+   
+}
+img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+    z-index: -1;  
+    filter: brightness(70%);
+    background: center no-repeat;
+
+}
+
+#clock{
+    font-size: 7rem;
+    color: antiquewhite;
+
+
+}
+
+#greeting{
+    font-size: 3rem;
+    color: antiquewhite;
+}
+/* todo form */
+#todo-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*show todo*/
+#todo-list{
+    position: relative;
+    padding: 0px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+#todo-list li{
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+    color: aliceblue;
+    font-size: 2rem;
+    
+    
+}
+#todo-list span {
+   
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 40px;
+  }
+
+.toggle{
+    text-decoration: line-through;
+    opacity: 0.5;
+  }
+button{
+    background-color: transparent;
+    outline: 0;
+    border: 0;
+    all: unset;
+    color: antiquewhite;
+    font-size: 20px;
+}
+button i{
+   
+    cursor: pointer;
+}
+button i:hover{
+    opacity: 0.5
+}
+input {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    border-bottom: 1px solid antiquewhite;
+    cursor: pointer;
+    font-size: 2rem;
+    color: aliceblue;
+}
+
+input::placeholder {
+    color: rgb(221, 217, 210); /* Placeholder 텍스트의 색상 */
+    font-style: italic; /* Placeholder 텍스트의 스타일 (기울임) */
+    font-size:20px;  /* Placeholder 텍스트의 크기 */
+    opacity: 0.7;
+}
+   
+/* quote */
+#quote {
+    position: relative;
+    display: flex;
+    margin-top: 5rem;
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+    color: antiquewhite;
+    width: 100%;
+    font-style: italic;
+    text-align: center;
+}
+/* weather */
+#weather{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: antiquewhite;
+}
+/* data */
+#Data{
+    color: antiquewhite;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+.hidden {
+    display: none;
+}
