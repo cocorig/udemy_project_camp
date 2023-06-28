@@ -1,6 +1,7 @@
 import Login from "./components/login";
 import TodoList from "./components/todolist";
 import RandomNumber from "./components/randomNumber";
+import Weather from "./components/weather";
 function App() {
   return (
    
@@ -8,6 +9,7 @@ function App() {
     <Login/>
     <TodoList/>
     <RandomNumber/>
+    <Weather/>
    </>             
   );
 }
